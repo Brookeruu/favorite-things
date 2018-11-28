@@ -40,8 +40,8 @@ class Item
   end
 
   def save()
-    @@list.push(self)
-  end
+        @@list.push(self)
+      end
 
   def self.clear()
     @@list = []
@@ -52,7 +52,8 @@ class Item
     return ranked
   end
 
-  def delete
+  def self.delete
+
 
   end
 
