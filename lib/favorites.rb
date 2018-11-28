@@ -25,7 +25,7 @@ class Item
   end
 
   def self.find_rank(rank)
-    item_rank = rank.to_i()
+    item_rank = rank
     @@list.each do |item|
       if item.rank == item_rank
         return item
