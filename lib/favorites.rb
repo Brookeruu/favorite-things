@@ -41,3 +41,14 @@ class Item
     @@list = []
   end
 end
+
+  def self.rank_sort
+    
+
+
+
+
+    if @@list.detect(rank: 1)
+      return @@list
+    end
+end
