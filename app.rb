@@ -24,7 +24,5 @@ end
 
 get('/rank/:rank') do
   @list = Item.all
-  rank = Item.find(params[:rank])
-  @name = Item.find(params[:name])
   erb(:rank)
 end

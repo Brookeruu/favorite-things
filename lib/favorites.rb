@@ -5,9 +5,15 @@ class Item
   attr_reader :rank
 
 
+
+
   def initialize(name, rank)
     @name = name
-    @id = @@list.length + 1
+    if @@list.detect { |i| i == nil}
+      @id = @@list.find_index{ |i| i == nil} + 1
+    else
+      @id = @@list.length + 1
+    end
     @rank = rank.to_i
   end
 
@@ -40,15 +46,14 @@ class Item
   def self.clear()
     @@list = []
   end
-end
 
-  def self.rank_sort
-    
+  def self.sort_rank
+    ranked = @@list.sort_by { |item| item.rank }
+    return ranked
+  end
 
+  def delete
 
+  end
 
-
-    if @@list.detect(rank: 1)
-      return @@list
-    end
 end
